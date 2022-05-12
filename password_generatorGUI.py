@@ -22,8 +22,8 @@ ltopic = Label(root, text="Password Generator", font='arial 42 bold', pady=5).pa
 def new_rand():
     pw_entry.delete(0,END)
 
-    if pswd_len.get() == '':
-        messagebox.showerror("Error", "Please Enter hom many characters you want")
+    if pswd_len.get() == '' or pswd_len.get() == '0':
+        messagebox.showerror("Error", "Please Enter how many characters you want")
     
     else:
         pw_len = int(pswd_len.get())
@@ -37,8 +37,8 @@ def new_rand():
 
 
 def copybtn():
-    if pswd_len.get() == '':
-        messagebox.showerror("Error", "Please Enter hom many characters you want")
+    if pswd_len.get() == '' or pswd_len.get() == '0':
+        messagebox.showerror("Error", "Please Enter how many characters you want")
     else:
         root.clipboard_clear()
         root.clipboard_append(pw_entry.get())
